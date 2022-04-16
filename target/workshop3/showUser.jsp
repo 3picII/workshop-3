@@ -7,7 +7,23 @@
         <i class="fas fa-download fa-sm text-white-50"></i> Lista użytkowników</a>
 </div>
 <div>
-
+    <h4 class="card-header">Dane użytkownika: </h4>
+</div>
+<div>
+    <table class="table">
+        <tr>
+            <th>Id: </th>
+            <td>${userShow.id}</td>
+        </tr>
+        <tr>
+            <th>Nazwa: </th>
+            <td>${userShow.userName}</td>
+        </tr>
+        <tr>
+            <th>Email: </th>
+            <td>${userShow.email}</td>
+        </tr>
+    </table>
 </div>
 
 <%@ include file="/footer.jsp" %>

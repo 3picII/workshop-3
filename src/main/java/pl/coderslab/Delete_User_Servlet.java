@@ -9,7 +9,8 @@ import java.io.IOException;
 public class Delete_User_Servlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        getServletContext().getRequestDispatcher("/list.jsp").forward(request, response);
+        UserDao userDao = new UserDao();
+        userDao.delete(Integer.parseInt(request.getParameter("id")));
+        response.sendRedirect("/list");
     }
 }

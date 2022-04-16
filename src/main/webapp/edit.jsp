@@ -8,14 +8,18 @@
 </div>
 <div>
     <div>
-        <form method="post" class="form-text">
+        <h4>Edycja użytkownika</h4>
+    </div>
+    <div class="card-body">
+        <form method="post">
+            <input type="hidden" name="id" value="${user.id}"/>
             <label for="userName">Nazwa </label><br>
-            <input type="text" id="userName" name="userName" placeholder="Nazwa użytkownika"><br>
+            <input value="${user.userName}" type="text" id="userName" name="userName" placeholder="Nazwa użytkownika"><br>
             <label for="userEmail">Email </label><br>
-            <input type="email" id="userEmail" name="userEmail" placeholder="Email użytkownika"><br>
+            <input value="${user.email}" type="email" id="userEmail" name="userEmail" placeholder="Email użytkownika"><br>
             <label for="userPassword">Hasło </label><br>
             <input type="password" id="userPassword" name="userPassword" placeholder="Hasło użytkownika"><br><br>
-            <input type="submit" value="Zapisz">
+            <input type="submit" value="Edytuj">
         </form>
 
     </div>

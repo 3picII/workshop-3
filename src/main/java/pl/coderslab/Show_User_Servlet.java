@@ -9,7 +9,10 @@ import java.io.IOException;
 public class Show_User_Servlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        String id = request.getParameter("id");
+        UserDao userDao = new UserDao();
+        User user1 = userDao.read(Integer.parseInt(id));
+        request.setAttribute("userShow",user1);
         getServletContext().getRequestDispatcher("/showUser.jsp").forward(request, response);
     }
 
